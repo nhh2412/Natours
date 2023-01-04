@@ -1,0 +1,105 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        position: relative;
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        &::after {
+            -webkit-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
+        -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    &--white {
+        background-color: #fff;
+        color: #777;
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    &--green {
+        background-color: #55c57a;
+        color: #fff;
+        &::after {
+            background-color: #55c57a;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+
+    &--animated {
+        -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+    }
+
+    &-text {
+        &:link,
+        &:visited {
+            font-size: 1.6rem;
+            color: #55c57a;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px solid #55c57a;
+            padding: 3px;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            background-color: #55c57a;
+            color: #fff;
+            -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+            -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+}
