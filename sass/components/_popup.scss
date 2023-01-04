@@ -4,29 +4,33 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba($color-black, 0.8);
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     &__content {
         position: absolute;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         width: 75%;
-        background-color: #fff;
-        -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+        background-color: $color-white;
+        -webkit-box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+        box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
         border-radius: 3px;
         display: table;
         overflow: hidden;
         opacity: 0;
         -webkit-transform: translate(-50%, -50%) scale(0.25);
+        -ms-transform: translate(-50%, -50%) scale(0.25);
         transform: translate(-50%, -50%) scale(0.25);
         -webkit-transition: all 0.5s 0.2s;
+        -o-transition: all 0.5s 0.2s;
         transition: all 0.5s 0.2s;
     }
     &__left {
@@ -48,13 +52,13 @@
         margin-bottom: 4rem;
         -moz-column-count: 2;
         -moz-column-gap: 4rem;
-        -moz-column-rule: 1px solid #eee;
+        -moz-column-rule: 1px solid $color-grey-light-2;
         -webkit-column-count: 2;
         column-count: 2;
         -webkit-column-gap: 4rem;
         column-gap: 4rem;
-        -webkit-column-rule: 1px solid #eee;
-        column-rule: 1px solid #eee;
+        -webkit-column-rule: 1px solid $color-grey-light-2;
+        column-rule: 1px solid $color-grey-light-2;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
@@ -66,13 +70,14 @@
     &:target &__content {
         opacity: 1;
         -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
     }
 
     &__close {
         &:link,
         &:visited {
-            color: #777;
+            color: $color-grey-dark;
             position: absolute;
             top: 2.5rem;
             right: 2.5rem;
@@ -80,11 +85,12 @@
             text-decoration: none;
             display: inline-block;
             -webkit-transition: all 0.2s;
+            -o-transition: all 0.2s;
             transition: all 0.2s;
             line-height: 1;
         }
         &:hover {
-            color: #55c57a;
+            color: $color-primary;
         }
     }
 }
@@ -92,6 +98,6 @@
     .popup {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba($color-black, 0.3);
     }
 }

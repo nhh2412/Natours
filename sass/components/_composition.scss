@@ -2,12 +2,13 @@
     position: relative;
     &__photo {
         width: 55%;
-        -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
         border-radius: 2px;
         position: absolute;
         z-index: 10;
         -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
         transition: all 0.2s;
         outline-offset: 2rem;
 
@@ -26,17 +27,19 @@
             top: 10rem;
         }
         &:hover {
-            outline: 1.5rem solid #55c57a;
+            outline: 1.5rem solid $color-primary;
             -webkit-transform: scale(1.05) translateY(-0.5rem);
+            -ms-transform: scale(1.05) translateY(-0.5rem);
             transform: scale(1.05) translateY(-0.5rem);
-            -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-            box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
             z-index: 20;
         }
     }
 
     &:hover &__photo:not(:hover) {
         -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
         transform: scale(0.95);
     }
 }
@@ -47,17 +50,19 @@
             float: left;
             position: relative;
             width: 33.33333333%;
-            -webkit-box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
-            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+            box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
             &--p1 {
                 top: 0;
                 -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
                 transform: scale(1.2);
             }
 
             &--p2 {
                 top: -1rem;
                 -webkit-transform: scale(1.3);
+                -ms-transform: scale(1.3);
                 transform: scale(1.3);
                 z-index: 100;
             }
@@ -66,6 +71,7 @@
                 top: 1rem;
                 left: 0;
                 -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
                 transform: scale(1.1);
             }
         }

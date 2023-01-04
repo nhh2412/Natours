@@ -9,24 +9,25 @@
         color: inherit;
         padding: 1.5rem 2rem;
         border-radius: 2px;
-        background-color: rbga(#fff, 0.5);
+        background-color: rbga($color-white, 0.5);
         border: none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
         -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
         &:focus {
             outline: none;
-            -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-            border-bottom: 3px solid #55c57a;
+            -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+            border-bottom: 3px solid $color-primary;
         }
         &:focus:invalid {
-            border-bottom: 3px solid #ff7730;
+            border-bottom: 3px solid $color-secondary-dark;
         }
         &::-webkit-input-placeholder {
-            color: #999;
+            color: $color-grey-dark-2;
         }
     }
 
@@ -37,13 +38,30 @@
         margin-top: 0.7rem;
         display: block;
         -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
+    }
+
+    &__input:-moz-placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-4rem);
+        transform: translateY(-4rem);
+    }
+
+    &__input:-ms-input-placeholder + &__label {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-4rem);
+        -ms-transform: translateY(-4rem);
+        transform: translateY(-4rem);
     }
 
     &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
         -webkit-transform: translateY(-4rem);
+        -ms-transform: translateY(-4rem);
         transform: translateY(-4rem);
     }
 
@@ -57,7 +75,7 @@
         }
 
         &-label {
-            font-size: 1.6rem;
+            font-size: $default-font-size;
             cursor: pointer;
             position: relative;
             padding-left: 4.5rem;
@@ -66,7 +84,7 @@
         &-button {
             height: 3rem;
             width: 3rem;
-            border: 5px solid #55c57a;
+            border: 5px solid $color-primary;
             border-radius: 50%;
             display: inline-block;
             position: absolute;
@@ -83,10 +101,12 @@
             top: 50%;
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            background-color: #55c57a;
+            background-color: $color-primary;
             opacity: 0;
             -webkit-transition: opacity 0.2s;
+            -o-transition: opacity 0.2s;
             transition: opacity 0.2s;
         }
 
