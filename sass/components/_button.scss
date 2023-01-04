@@ -12,6 +12,7 @@
         transition: all 0.2s;
         position: relative;
         font-size: $default-font-size;
+
         border: none;
         cursor: pointer;
     }
@@ -22,6 +23,7 @@
         transform: translateY(-3px);
         -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
         &::after {
             -webkit-transform: scaleX(1.4) scaleY(1.6);
             -ms-transform: scaleX(1.4) scaleY(1.6);
@@ -43,6 +45,7 @@
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
+
         &::after {
             background-color: $color-white;
         }
@@ -51,6 +54,7 @@
     &--green {
         background-color: $color-primary;
         color: $color-white;
+
         &::after {
             background-color: $color-primary;
         }
@@ -77,37 +81,37 @@
         -webkit-animation-fill-mode: backwards;
         animation-fill-mode: backwards;
     }
+}
 
-    &-text {
-        &:link,
-        &:visited {
-            font-size: $default-font-size;
-            color: $color-primary;
-            display: inline-block;
-            text-decoration: none;
-            border-bottom: 1px solid $color-primary;
-            padding: 3px;
-            -webkit-transition: all 0.2s;
-            -o-transition: all 0.2s;
-            transition: all 0.2s;
-        }
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+    }
 
-        &:hover {
-            background-color: $color-primary;
-            color: $color-white;
-            -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
-            box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
-            -webkit-transform: translateY(-2px);
-            -ms-transform: translateY(-2px);
-            transform: translateY(-2px);
-        }
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
 
-        &:active {
-            -webkit-box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
-            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
-            -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-            transform: translateY(0);
-        }
+    &:active {
+        -webkit-box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
     }
 }
