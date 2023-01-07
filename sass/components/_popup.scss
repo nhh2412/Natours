@@ -12,6 +12,10 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
 
+    @include respond(tab-land) {
+        display: none;
+    }
+
     @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
@@ -20,7 +24,6 @@
 
     &__content {
         @include absCenter;
-
         width: 75%;
         background-color: $color-white;
         -webkit-box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
